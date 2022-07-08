@@ -1,0 +1,99 @@
+
+:root {
+
+    
+    /* Light Theme */
+    
+    --VeryLightGray: hsl(0, 0%, 98%);
+    --VeryLightGrayishBlue: hsl(236, 33%, 92%);
+    --LightGrayishBlue: hsl(233, 11%, 84%);
+    --DarkGrayishBlue: hsl(236, 9%, 61%);
+    --VeryDarkGrayishBlue: hsl(235, 19%, 35%);
+    
+    
+    /* Dark theme */
+    
+        --Bright-Blue: hsl(220, 98%, 61%);
+        --Check-Background: linear-gradient(142deg, hsl(192, 100%, 67%) 10%, hsl(280, 87%, 65%)) ;
+    
+        --Very-DarkBlue: hsl(235, 21%, 11%);
+        --Very-DarkDesaturatedBlue: hsl(235, 24%, 19%);
+        --Light-GrayishBlue: hsl(234, 39%, 85%);
+        --Dark-GrayishBlue: hsl(234, 11%, 52%);
+        --Very-DarkGrayishBlue: hsl(233, 14%, 35%);
+        --Very-HeavyDarkGrayishBlue: hsl(237, 14%, 26%);
+    
+        /* Hover */
+        --Light-GrayishBlueHover: hsl(236, 33%, 92%);
+    
+        --sans-serif: 'Josefin Sans', sans-serif;
+        --font-18: 0.8rem;
+        --font-24: 1.2rem;
+        --font-32: 2.2rem;
+        --font-80: 5rem;
+      
+        --spacing-4: 15px 20px;
+        --spacing-8: 0.5rem;
+        --spacing-16: 1rem;
+      
+        --shadow-1: hsl(0, 0%, 0%, 0.1);
+      
+        --radius-base: 4px;
+      }
+
+.todo-item{
+	border-bottom: 1px solid var(--LightGrayishBlue) !important;
+	background-color: var(--VeryLightGray) !important;
+	color: var(--VeryDarkGrayishBlue) !important;
+  transition: background-color 1s;
+	}
+
+body{
+		background-color: var(--VeryLightGrayishBlue);
+		background-image: url("/asset/bg-desktop-light.jpg");
+    transition: background-color 1s;
+	}
+
+label{
+		border:1px solid var(--LightGrayishBlue)!important;
+	}
+.dragable{
+ background: linear-gradient(to right,var(--LightGrayishBlue)
+ 1px,var(--VeryLightGrayishBlue)
+ 1px,var(--VeryLightGrayishBlue) 2px,var(--LightGrayishBlue) 
+ 2px,var(--LightGrayishBlue) 3px,
+ var(--VeryLightGrayishBlue) 3px,
+ var(--VeryLightGrayishBlue) 4px,var(--LightGrayishBlue) 4px) !important;
+	}
+
+form {
+	background-color: var(--VeryLightGray)!important;
+	color :var(--VeryDarkGrayishBlue) !important;
+  transition: background-color 1s;
+	}
+.todos {
+	background-color: var(--VeryLightGray)!important;
+	color :var(--VeryDarkGrayishBlue) !important;
+  transition: background-color 1s;
+	}
+
+  .drag-span{
+    color :var(--VeryDarkGrayishBlue) !important;
+  }
+
+  label{
+    background-color: var(--VeryLightGray) !important
+}
+
+.mobile-filters{
+  background-color: var(--VeryLightGray)!important;
+}
+
+@media screen and (max-width: 700px) {
+
+
+body{
+background-image: url("/asset/bg-mobile-light.jpg");
+}
+
+}
