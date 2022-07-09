@@ -4,7 +4,7 @@ import  {todoData}  from "../Todostores"
 export let id, text , completed
 
 const handleCompleted = () =>{
- 
+   completed = !completed
     const index = $todoData.findIndex(todo =>{
         return todo.id === id
     })
@@ -28,7 +28,7 @@ const handleDelete = () =>{
         bind:checked={completed} 
         on:change={handleCompleted}
         >
-     <label for={id} aria-label="check"></label>
+     <label for={id} aria-label="check" on:click={handleCompleted}></label>
     </div>
     <div aria-label="todo text" class="todo-text">
         <span class:completed={completed}>{text}</span>        
