@@ -1,6 +1,7 @@
 <script>
 import { onDestroy } from "svelte/internal";
 import  {todoData}  from "./Todostores"
+import  {theme}  from "./Todostores"
 import ItemList from "./components/itemList.svelte";
 import Header from "./components/header.svelte";
 import Footer from "./components/footer.svelte";
@@ -54,6 +55,7 @@ function dragStart(itemIndexDrag)
 
 function  drop( itemIndexDrop )
 {
+	console.log(itemIndex,itemIndexDrop)
 	const index = todos.findIndex(todo =>{
         return itemIndexDrop === todo.id
     })
@@ -62,24 +64,25 @@ function  drop( itemIndexDrop )
     })
 
 	todos[index2]=todos.splice(index, 1, todos[index2])[0]
+	
 }
 
-let  theme_btn_sun = true
-let  theme_btn_moon = false
+let  theme_btn_sun = $theme[0].themes
+let  theme_btn_moon = !$theme[0].themes
 
 const handleToggleTheme = () =>{
 	theme_btn_sun = !theme_btn_sun
 	theme_btn_moon = !theme_btn_moon
+	$theme=[{themes:theme_btn_sun}]
 }
 
-$:console.log(todos)
 </script>
 
 
 
 
 <svelte:head>
-	{#if !theme_btn_sun }
+	{#if !$theme[0].themes}
 	<link rel='stylesheet' href='/globalLight.css'>
 	{/if}
 </svelte:head>
